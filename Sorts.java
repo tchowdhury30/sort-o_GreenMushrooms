@@ -1,22 +1,21 @@
-
 // Green Mushrooms | Emily Ortiz, Tasnim Chowdhury, Kartik Vanjani
 // APCS pd8
-// Lab03
-// SOTW
+// Lab04
+// SOTW: TBD
 
 import java.util.ArrayList;
+
 public class Sorts {
+  public Sorts(){} //default constructor
 
-  public Sorts(){}
-
-//~~~~~~~~~~~~~~~~~~~ HELPER METHODS ~~~~~~~~~~~~~~~~~~~
+ //~~~~~~~~~~~~~~~~~~~ HELPER METHODS ~~~~~~~~~~~~~~~~~~~
   //precond:  lo < hi && size > 0
   //postcond: returns an ArrayList of random integers
   //          from lo to hi, inclusive
   public static ArrayList populate( int size, int lo, int hi ) {
     ArrayList<Integer> retAL = new ArrayList<Integer>();
     while( size > 0 ) {
-      //     offset + rand int on interval [lo,hi]
+      // offset + rand int on interval [lo,hi]
       retAL.add( lo + (int)( (hi-lo+1) * Math.random() ) );
       size--;
     }
@@ -35,60 +34,98 @@ public class Sorts {
       al.set( i, al.set( randomIndex, al.get(i) ) );
     }
   }
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-public static void bubbleSortV( ArrayList<Comparable> data )
-  {
-    int passCtr = 0;
-    // does length-1 passes bc that is when everything is for sure sorted
+  public static void bubbleSortV( ArrayList<Comparable> data ) {
+    int passCtr = 0; 
+  	int swapCtr = 0;
+    int compCtr = 0;
+    
+  	// does length-1 passes bc that is when everything is for sure sorted
     for (int j = 0; j < data.size()-1; j++){
-    	// traversing thru array from last element to 0 index
+    	
+      // traversing thruough array from last element to 0 index
     	for (int i = data.size()-1; i > j; i--){
-		Comparable mainObj = data.get(i);
-		Comparable adjacentObj = data.get(i-1);
-	      	if (mainObj.compareTo(adjacentObj) < 0) {
-		        // swap
-			data.set(i, adjacentObj);
-			data.set(i-1, mainObj);
+					Comparable mainObj = data.get(i);
+					Comparable adjacentObj = data.get(i-1);
+  				
+        	// if value at index we are looking at is less than the value before it, swap
+	      	if (mainObj.compareTo(adjacentObj) < 0) { 
+						data.set(i, adjacentObj);
+						data.set(i-1, mainObj);
+           	swapCtr++;
       		}
+        	compCtr++;
         }
       passCtr++;
     }
-  }
+    System.out.println("BubbleSort Data|\tComparisons: " + compCtr + "\tSwaps: " + swapCtr + "\tPasses: " + passCtr);
+  } //end bubbleSortV
 
-  // VOID version of SelectionSort
-  // Rearranges elements of input ArrayList
-  // postcondition: data's elements sorted in ascending order
-  public static void selectionSortV( ArrayList<Comparable> data )
- {
-   //note: this version places greatest value at "rightmost" end
-   //maxPos will point to position of SELECTION (greatest value)
-   int maxPos;
+  
+  public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input ) {
+   	ArrayList<Comparable> output = new ArrayList<Comparable>();
+		// adding all of input's elements into output
+		for (int i = 0; i < input.size(); i++){
+			output.add(input.get(i));
+		}
+		//sort the copy
+  		bubbleSortV(output);
 
-   for(int pass=data.size()-1; pass > 0; pass-- ) {
-     System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
-     int min = (int)(data.get(0));;
+		return output;
+  	}
+  
+  public static void selectionSortV( ArrayList<Comparable> data ) {
+    //note: this version places greatest value at "rightmost" end
+    int passCtr = 0;
+    int swapCtr = 0;
+    int compCtr = 0;
+    int maxPos; //maxPos will point to position of SELECTION (greatest value)
 
-     for( maxPos=pass; maxPos > 0; maxPos-- ) {
-       System.out.println( "maxPos: " + maxPos );//diag
-       System.out.println( data );//diag
-       if ((data.get(maxPos)).compareTo(min) > 0) {
-         min = (int)(data.get(maxPos));
-       }
-     }
+    //does length-1 passes bc that is when everything is sorted
+    for(int pass=data.size()-1; pass > 0; pass-- ) {
+      System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+      int min = (int)(data.get(0));; //creating variable to represent largest value of the current pass 
 
-     data.set(data.indexOf(min), data.get(pass));
-     data.set(pass, min);
-     System.out.println( "after swap: " +  data );//diag
-   }
+      // sets the max (largest position) to pass, and goes right to left to determine the largest value and print its data. 
+      for( maxPos=pass; maxPos > 0; maxPos-- ) {
+        System.out.println( "maxPos: " + maxPos );//diag
+        System.out.println( data );//diag
+       
+        //if value at current index is greater than min, change min to current value 
+        compCtr++;
+        if ((data.get(maxPos)).compareTo(min) > 0) {
+          min = (int)(data.get(maxPos));
+          swapCtr++;
+        }
+      }
+      
+      //swap
+      data.set(data.indexOf(min), data.get(pass));
+      data.set(pass, min);
+      System.out.println( "after swap: " +  data );//diag	
+      passCtr++;
+    }
+		System.out.println("SelectionSort Data|\tComparisons: " + compCtr + "\tSwaps: " + swapCtr + "\tPasses: " + passCtr);
+  }//end selectionSort
+  
+  public static ArrayList<Comparable> selectionSort( ArrayList<Comparable> input ) {
+   	ArrayList<Comparable> output = new ArrayList<Comparable>();
+		// adding all of input's elements into output
+		for (int i = 0; i < input.size(); i++){
+			output.add(input.get(i));
+		}
+		//sort the copy
+  		selectionSortV(output);
 
- }//end selectionSort
-
- // VOID version of InsertionSort
- // Rearranges elements of input ArrayList
- // postcondition: data's elements sorted in ascending order
-  public static void insertionSortV( ArrayList<Comparable> data )
-  {
+		return output;
+  	}
+  
+  public static void insertionSortV( ArrayList<Comparable> data ) {
+    // partition counter.
+    int passCtr = 0;
+    int swapCtr = 0;
+    int compCtr = 0;
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
 
@@ -103,15 +140,32 @@ public static void bubbleSortV( ArrayList<Comparable> data )
         if ( data.get(i).compareTo(data.get(i-1)) < 0) {
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
 
+          // swaps the values as necessary
           Comparable temp = data.get(i);
           data.set(i, data.get(i-1));
           data.set(i-1, temp);
+          swapCtr++;
+          passCtr++;
+          compCtr++;
+          System.out.println("SelectionSort Data|\tComparisons: " + compCtr + "\tSwaps: " + swapCtr + "\tPasses: " + passCtr);
         }
         else {
           break;
         }
-      }
+      } 
     }
-  }//end insertionSortV
+  } //end insertionSortV
+  
+    public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input ) {
+   	ArrayList<Comparable> output = new ArrayList<Comparable>();
+		// adding all of input's elements into output
+		for (int i = 0; i < input.size(); i++){
+			output.add(input.get(i));
+		}
+		//sort the copy
+  		insertionSortV(output);
 
-}
+		return output;
+  	}
+  
+} //end Sorts
