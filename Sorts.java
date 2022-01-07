@@ -46,6 +46,7 @@ public static void bubbleSortV( ArrayList<Comparable> data )
     	for (int i = data.size()-1; i > j; i--){
 		Comparable mainObj = data.get(i);
 		Comparable adjacentObj = data.get(i-1);
+
 	      	if (mainObj.compareTo(adjacentObj) < 0) {
 		        // swap
 			data.set(i, adjacentObj);
