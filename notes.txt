@@ -1,0 +1,18 @@
+Green Mushrooms | Emily Ortiz, Tasnim Chowdhury, Kartik Vanjani
+APCS pd8
+Lab04
+22-01-10
+
+DISCO
+- Max # of guesses for linSearch is n
+- max # of guesses for binSearch is n/2
+
+QCC
+
+BUB-QA
+
+SEL-QA
+
+INS-QA
+
+Number of guesses necessary for 1-n:
