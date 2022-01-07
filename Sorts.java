@@ -1,7 +1,11 @@
 // Green Mushrooms | Emily Ortiz, Tasnim Chowdhury, Kartik Vanjani
 // APCS pd8
 // Lab04
+<<<<<<< HEAD
 // SOTW
+=======
+// SOTW: TBD
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
 
 import java.util.ArrayList;
 
@@ -37,6 +41,7 @@ public class Sorts {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public static void bubbleSortV( ArrayList<Comparable> data ) {
+<<<<<<< HEAD
     int passCtr = 0;
   	int swapCtr = 0;
     int compCtr = 0;
@@ -44,13 +49,28 @@ public class Sorts {
   	// does length-1 passes bc that is when everything is for sure sorted
     for (int j = 0; j < data.size()-1; j++){
 
+=======
+    int passCtr = 0; 
+  	int swapCtr = 0;
+    int compCtr = 0;
+    
+  	// does length-1 passes bc that is when everything is for sure sorted
+    for (int j = 0; j < data.size()-1; j++){
+    	
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
       // traversing thruough array from last element to 0 index
     	for (int i = data.size()-1; i > j; i--){
 					Comparable mainObj = data.get(i);
 					Comparable adjacentObj = data.get(i-1);
+<<<<<<< HEAD
 
         	// if value at index we are looking at is less than the value before it, swap
 	      	if (mainObj.compareTo(adjacentObj) < 0) {
+=======
+  				
+        	// if value at index we are looking at is less than the value before it, swap
+	      	if (mainObj.compareTo(adjacentObj) < 0) { 
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
 						data.set(i, adjacentObj);
 						data.set(i-1, mainObj);
            	swapCtr++;
@@ -62,7 +82,11 @@ public class Sorts {
     System.out.println("BubbleSort Data|\tComparisons: " + compCtr + "\tSwaps: " + swapCtr + "\tPasses: " + passCtr);
   } //end bubbleSortV
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input ) {
    	ArrayList<Comparable> output = new ArrayList<Comparable>();
 		// adding all of input's elements into output
@@ -74,7 +98,11 @@ public class Sorts {
 
 		return output;
   	}
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
   public static void selectionSortV( ArrayList<Comparable> data ) {
     //note: this version places greatest value at "rightmost" end
     int passCtr = 0;
@@ -85,6 +113,7 @@ public class Sorts {
     //does length-1 passes bc that is when everything is sorted
     for(int pass=data.size()-1; pass > 0; pass-- ) {
       System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+<<<<<<< HEAD
       int min = (int)(data.get(0));; //creating variable to represent largest value of the current pass
 
       // sets the max (largest position) to pass, and goes right to left to determine the largest value and print its data.
@@ -93,22 +122,44 @@ public class Sorts {
         System.out.println( data );//diag
 
         //if value at current index is greater than min, change min to current value
+=======
+      int min = (int)(data.get(0));; //creating variable to represent largest value of the current pass 
+
+      // sets the max (largest position) to pass, and goes right to left to determine the largest value and print its data. 
+      for( maxPos=pass; maxPos > 0; maxPos-- ) {
+        System.out.println( "maxPos: " + maxPos );//diag
+        System.out.println( data );//diag
+       
+        //if value at current index is greater than min, change min to current value 
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
         compCtr++;
         if ((data.get(maxPos)).compareTo(min) > 0) {
           min = (int)(data.get(maxPos));
           swapCtr++;
         }
       }
+<<<<<<< HEAD
 
       //swap
       data.set(data.indexOf(min), data.get(pass));
       data.set(pass, min);
       System.out.println( "after swap: " +  data );//diag
+=======
+      
+      //swap
+      data.set(data.indexOf(min), data.get(pass));
+      data.set(pass, min);
+      System.out.println( "after swap: " +  data );//diag	
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
       passCtr++;
     }
 		System.out.println("SelectionSort Data|\tComparisons: " + compCtr + "\tSwaps: " + swapCtr + "\tPasses: " + passCtr);
   }//end selectionSort
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
   public static ArrayList<Comparable> selectionSort( ArrayList<Comparable> input ) {
    	ArrayList<Comparable> output = new ArrayList<Comparable>();
 		// adding all of input's elements into output
@@ -120,7 +171,11 @@ public class Sorts {
 
 		return output;
   	}
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
   public static void insertionSortV( ArrayList<Comparable> data ) {
     // partition counter.
     int passCtr = 0;
@@ -152,10 +207,14 @@ public class Sorts {
         else {
           break;
         }
-      }
+      } 
     }
   } //end insertionSortV
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
     public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input ) {
    	ArrayList<Comparable> output = new ArrayList<Comparable>();
 		// adding all of input's elements into output
@@ -167,5 +226,9 @@ public class Sorts {
 
 		return output;
   	}
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 83ee7b81c70422300a7f1b611866aca1dcb67437
 } //end Sorts
