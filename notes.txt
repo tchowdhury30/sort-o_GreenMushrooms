@@ -14,5 +14,14 @@ BUB-QA
 SEL-QA
 
 INS-QA
+ * q0: How many passes to sort n elements?
+ * a0: n - 1 passes
+ * q1: What do you know after pass p?
+ * a1: elements from 0 to index p are sorted
+ * q2: How will you know when sorted?
+ * a2: When passes = n - 1 or when the partition is at the end
+ * q3: What constitues a pass?
+ * a3: We can only move on from a pass when all the elements on the sorted side are in order and the partition changes
+ * q4: What must you track?
+ * a4: Where the partition is
 
-Number of guesses necessary for 1-n:
