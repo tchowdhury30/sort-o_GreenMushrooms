@@ -20,6 +20,10 @@ public class Driver {
     glen_.add(1);
 
     Sorts bob = new Sorts();
+    //random case
+    ArrayList<Comparable> glenR = bob.populate( 10, 1, 100 );
+
+
 
 
     //Bubble Sort Best Case
@@ -36,12 +40,15 @@ public class Driver {
     ArrayList glen_BubSrt = bob.bubbleSort(glen_);
     System.out.println( "\nArrayList glen after sorting:\n" + glen_BubSrt);
 
-    /*
-    ArrayList coco = bob.populate( 10, 1, 1000 );
-    System.out.println( "ArrayList coco before sorting:\n" + coco );
-    bob.bubbleSortV(coco);
-    System.out.println( "ArrayList coco after sorting:\n" + coco );
-		*/
+
+    //Bubble Sort Random Case
+    System.out.println("\n*** Testing SelectionSort random case... *** ");
+
+    System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
+    ArrayList bubglenR = bob.bubbleSort(glenR);
+    System.out.println( "\nArrayList glenR after sorting:\n" + bubglenR );
+
+
 
     //Selection Sort Best Case
     System.out.println("\n\n*** Testing selectionsort best case... *** ");
@@ -58,12 +65,14 @@ public class Driver {
     System.out.println( "\nArrayList glen after sorting:\n" + glen_SelSrt);
 
 
-    /*
-    ArrayList coco1 = bob.populate( 10, 1, 1000 );
-    System.out.println( "ArrayList coco before sorting:\n" + coco1 );
-    bob.selectionSortV(coco1);
-    System.out.println( "ArrayList coco after sorting:\n" + coco1 );
-    */
+    //Selection Sort Random Case
+    System.out.println("\n*** Testing SelectionSort random case... *** ");
+
+    System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
+    ArrayList selglenR = bob.selectionSort(glenR);
+    System.out.println( "\nArrayList glenR after sorting:\n" + selglenR );
+
+
 
     //Insertion Sort Best Case
     System.out.println("\n\n*** Testing insertionSort best case... *** ");
@@ -79,14 +88,13 @@ public class Driver {
     ArrayList glen_InsSrt = bob.insertionSort(glen_);
     System.out.println( "\nArrayList glen_ after sorting:\n" + glen_InsSrt );
 
-/*
     //Insertion Sort Random Case
     System.out.println("\n*** Testing insertionSort random case... *** ");
-    ArrayList insRan = bob.populate( 10, 1, 1000 );
-    System.out.println( "\nArrayList coco before sorting:\n" + insRan );
-    bob.insertionSortV(insRan);
-    System.out.println( "\nArrayList coco after sorting:\n" + insRan );
-*/
+
+    System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
+    ArrayList insglenR = bob.insertionSort(glenR);
+    System.out.println( "\nArrayList glenR after sorting:\n" + insglenR );
+
 
   }//end Main
 }//end Driver
