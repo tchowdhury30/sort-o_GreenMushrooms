@@ -129,6 +129,7 @@ public class Sorts {
     int swapCtr = 0;
     int compCtr = 0;
     for(int partition = 1; partition < data.size(); partition++) {
+	passCtr++;
       //partition marks first item in unsorted region
 
 //      System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
@@ -136,7 +137,7 @@ public class Sorts {
 
       //traverse sorted region from right to left
       for(int i = partition; i > 0; i --) {
-        passCtr++;
+        
 
         // "walk" the current item to where it belongs
         // by swapping adjacent items
