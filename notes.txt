@@ -16,6 +16,9 @@ QCC
  * a1: We know that all elements from index p-1 and less are in order
  * q2: How many passes are necessary to completely sort?
  * a2: The worse case scenario would require length passes to completely sort
+ *   - ArrayLists are pass-by-reference
+ *   - You only need to do the p-1 passes for an array of length p, because the last item
+ *     will have to be in the right spot.
 
 ## SEL-QA
  * q0: How many passes to sort n elements?
