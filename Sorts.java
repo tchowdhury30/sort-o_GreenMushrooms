@@ -55,7 +55,7 @@ public class Sorts {
       passCtr++;
     }
     System.out.println(
-    "\nBubbleSort Data --------> Comparisons: " + compCtr +
+    "\nBubbleSort Data | Comparisons: " + compCtr +
     " \tSwaps: " + swapCtr +
     " \tPasses: " + passCtr);
   } //end bubbleSortV
@@ -106,7 +106,7 @@ public class Sorts {
       passCtr++;
     }
     System.out.println(
-    "\nSelectionSort Data --------> Comparisons: " + compCtr +
+    "\nSelectionSort Data | Comparisons: " + compCtr +
     " \tSwaps: " + swapCtr +
     " \tPasses: " + passCtr);
   }//end selectionSort
@@ -156,7 +156,7 @@ public class Sorts {
       }
     }
     System.out.println(
-    "\nInsertionSort Data --------> Comparisons: " + compCtr +
+    "\nInsertionSort Data | Comparisons: " + compCtr +
     " \tSwaps: " + swapCtr +
     " \tPasses: " + passCtr);
   } //end insertionSortV
