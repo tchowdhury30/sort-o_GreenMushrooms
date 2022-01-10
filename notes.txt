@@ -9,11 +9,21 @@ DISCO
 
 QCC
 
-BUB-QA
+##BUB-QA
 
-SEL-QA
-
-INS-QA
+## SEL-QA
+ * q0: How many passes to sort n elements?
+ * a0: n-1 passes
+ * q1: What do you know after pass p?
+ * a1: After pass p, all values are set in their final positions at all indexes less than and equal to p-1.
+ * q2: How do you know if sorted?
+ * a2: If the pass number is equal to or less than  the index+1.
+ * q3: What does a pass boil down to?
+ * a3: When 1 swap happens between the smallest value and the value at the position its looking at.
+ ALGO
+ Select smallest element, move to end, then select next smallest, move to next-to-end.
+ 
+## INS-QA
 - q0: How many passes to sort n elements? a0: n - 1 passes
 - q1: What do you know after pass p? a1: elements from 0 to index p are sorted
 - q2: How will you know when sorted? a2: When passes = n - 1 or when the partition is at the end
