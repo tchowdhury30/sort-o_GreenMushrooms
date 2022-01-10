@@ -8,6 +8,8 @@ DISCO
 - The n in O(n) can be roughly the same as the number of passes 
 
 QCC
+- How much memory is allocated for Comparables?
+- Is there a case in which O of any constant is the best or worse time complexity? 
 
 ## BUB-QA
  * q0: If a pass requires no swaps, what do you know?
