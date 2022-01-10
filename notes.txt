@@ -9,7 +9,7 @@ DISCO
 
 QCC
 
-##BUB-QA
+## BUB-QA
 
 ## SEL-QA
  * q0: How many passes to sort n elements?
