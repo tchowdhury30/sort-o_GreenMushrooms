@@ -42,7 +42,7 @@ public class Driver {
 
 
     //Bubble Sort Random Case
-    System.out.println("\n*** Testing SelectionSort random case... *** ");
+    System.out.println("\n*** Testing BubbleSort random case... *** ");
 
     System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
     ArrayList bubglenR = bob.bubbleSort(glenR);
