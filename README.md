@@ -17,7 +17,8 @@ __________________________
 
 # SelectionSort
 - The best case for selection sort would also be the elements listed in order from least to greatest, or the least number being placed at the minPos and the greatest element being placed in the maxPos because then it would be way easier to get the elemts in their proper spaces. However, with the elements already being in least to greatest form, the elements would not need to be moved at all, and thus it would be the best case possible. 
-  - Time complexity
+  - Time complexity: We believe the best case would be O(n) and here is why. Say for instance we have an array we need sorted listed as [1, 2, 3, 4, 5]. Since the loop will run around the times equal to the amount of elements present in the array, and since the array is already sorted, the comparisons would be equal to the elements in the array minus 1, or n - 1, passes would also be n - 1, but the swaps would be 0. Since selection sort work by placing the minimum value at the start and the next less value next to start and so on, one loop nested, or O(n) would be the best case. 
+
 - The worst case 
   - Time complexity 
 
