@@ -22,7 +22,7 @@ public class Driver {
     Sorts bob = new Sorts();
     //random case
     ArrayList<Comparable> glenTen = bob.populate( 10, 1, 100);
-    ArrayList<Compareable> glenHundred = bob.populate(100, 1, 100);
+    ArrayList<Comparable> glenHundred = bob.populate(100, 1, 100);
     ArrayList<Comparable> glenThousand = bob.populate(1000, 1, 100);
 
 
@@ -42,11 +42,18 @@ public class Driver {
     //System.out.println( "\nArrayList glen after sorting: " + glen_BubSrt);
 
 
-    //Bubble Sort Random Case
+    //Bubble Sort Random Cases
     System.out.println("\n***** Testing BubbleSort random cases... ***** ");
 
     ///System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
-    ArrayList bubglenR = bob.bubbleSort(glenR);
+
+    ArrayList bubglenTen = bob.bubbleSort(glenTen);
+    System.out.println("\nTen List " + bubglenTen);
+
+    ArrayList bubglenHundred = bob.bubbleSort(glenHundred);
+    System.out.println("\n");
+
+    ArrayList bubglenThousand = bob.bubbleSort(glenThousand);
     System.out.println("\n");
     //System.out.println( "\nArrayList glenR after sorting: " + bubglenR );
 
@@ -70,11 +77,18 @@ public class Driver {
     //Selection Sort Random Case
     System.out.println("\n***** Testing SelectionSort random case... ***** ");
 
-    System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
-    ArrayList selglenR = bob.selectionSort(glenR);
+    //System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
+    //ArrayList selglenR = bob.selectionSort(glenR);
     //System.out.println( "\nArrayList glenR after sorting: " + selglenR );
 
+    ArrayList selglenTen = bob.bubbleSort(glenTen);
+    System.out.println("\n");
 
+    ArrayList selglenHundred = bob.bubbleSort(glenHundred);
+    System.out.println("\n");
+
+    ArrayList selglenThousand = bob.bubbleSort(glenThousand);
+    System.out.println("\n");
 
     //Insertion Sort Best Case
     System.out.println("\n\n***** Testing insertionSort best case... ***** ");
@@ -93,8 +107,8 @@ public class Driver {
     //Insertion Sort Random Case
     System.out.println("\n***** Testing insertionSort random case... ***** ");
 
-    System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
-    ArrayList insglenR = bob.insertionSort(glenR);
+    //System.out.println( "\nArrayList glenR before sorting:\n" + glenR );
+    //ArrayList insglenR = bob.insertionSort(glenR);
     //System.out.println( "\nArrayList glenR after sorting: " + insglenR );
 
 
