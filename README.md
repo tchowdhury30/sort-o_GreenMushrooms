@@ -24,8 +24,7 @@ __________________________
 
 - The worst case for selection sort would be if the elements in the array are listed from greatest to least. Since the maximum number of swaps you can do is the element number minus 1 since the algorithm finds the minimum value and puts it at the end and so on, the worse case possible would be to have every element from greatest to least. This way every element would be out of place, and the number of swaps would be the greatest. 
   - Eg. [12, 7, 5, 3, 1] -------> Comparisons: 4    Swaps: 4     Passes: 4
-  - Time complexity should be O(n^2). Since the selection sort algorithm looks for the minimum values, and it would take two nested loops to place the minimum value in its position and the max at the last, the worst case would be n* n+1 which would be O(n^2).
-
+  - Time complexity should be O(n^2). Since the selection sort algorithm looks for the minimum values, and it would take two nested loops to place the minimum value in its position and the max at the last, the worse case would be O(n^2).
 # InsertionSort
 - The best case for insertion sort would be one that requires 0 swaps, which means the conditional under the nested for loop must always return false. In order for this to be the case, the number to the left of a chosen index must always be less than the number at the chosen index, meaning that the array must be in already ascending order, or sorted. 
   - Eg. [1, 3, 5, 7, 12] -------> Comparisons: 4     Swaps: 0     Passes: 4
