@@ -10,6 +10,12 @@ DISCO
 QCC
 
 ## BUB-QA
+ * q0: If a pass requires no swaps, what do you know?
+ * a0: The ArrayList is already in order
+ * q1: After pass p, what do you know?
+ * a1: We know that all elements from index p-1 and less are in order
+ * q2: How many passes are necessary to completely sort?
+ * a2: The worse case scenario would require length passes to completely sort
 
 ## SEL-QA
  * q0: How many passes to sort n elements?
