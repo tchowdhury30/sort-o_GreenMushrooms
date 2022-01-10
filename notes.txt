@@ -20,6 +20,9 @@ QCC
  * a2: If the pass number is equal to or less than  the index+1.
  * q3: What does a pass boil down to?
  * a3: When 1 swap happens between the smallest value and the value at the position its looking at.
+  - Selectionsort is right to left while bubble sort was from left to right.
+   - We have to use pass-- in our loops since the loop goes from right to left
+     as oppose to left to right which is why we do not use pass++. 
  ALGO
  Select smallest element, move to end, then select next smallest, move to next-to-end.
  
